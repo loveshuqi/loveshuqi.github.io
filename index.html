@@ -3,6 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" href="./favicon.ico">
   <style type="text/css">
     .words {
       font-size: 100px;
@@ -12,14 +13,14 @@
     }
 
     .subwords {
-      font-size: 30px;
+      font-size: 60px;
       font-family: 'Regular', cursive;
       width: auto;
       text-align: center;
     }
 
     .days {
-      font-size: 120px;
+      font-size: 60px;
       font-family: 'Regular', cursive;
       width: auto;
       text-align: center;
@@ -55,8 +56,8 @@
     }
 
     .headPhoto {
-      width: 30rem;
-      height: 30rem;
+      width: 26rem;
+      height: 26rem;
       background: url(./img/ww.jpeg) no-repeat;
       background-size: cover;
       border-radius: 50%;
@@ -65,6 +66,18 @@
       left: 40%;
       margin-left: -4rem;
       transition: all 0.3s;
+      animation: spin 30s linear infinite;
+    }
+
+    /* 定义旋转动画 */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     /* snow */
@@ -140,7 +153,7 @@
     }
   </style>
   <meta http-equiv="X-UA-Compatible" content="IE=8">
-  <title>😘下雪了, ❤️琪😘</title>
+  <title>😘❄️下雪了, 王淑琪❄️😘</title>
 
   <script src="./jscss/jquery-1.8.3.min.js" type="text/javascript"></script>
   <script type="text/javascript">
@@ -190,7 +203,7 @@
   <div class="contain">
 
     <div class="headPhoto"></div>
-    <div class="words">圣诞快乐, ❤️琪</div>
+    <div class="words">❤️下雪了, 狗蛋琪琪❤️</div>
     <div class="subwords">😘爱你呦😘</div>
     <div class="days">
       <span class="days-number">1921</span>
@@ -199,9 +212,8 @@
     <div class="seconds">15 hours 24 minutes 30 seconds</div>
 
     <div class="footer">
-      <p>©2023 Wangpeng</a></p>
+      <p>©2023 WangPeng 汪鹏</a></p>
     </div>
-
 
     <div class="snow">
       <div class="gran">
