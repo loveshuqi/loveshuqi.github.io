@@ -194,42 +194,48 @@
       $('.seconds').text(hours + " hours " + minutes + " minutes " + seconds + " seconds");
       setTimeout("updateNumbers()", 1000);
     }
+
+    window.addEventListener("DOMContentLoaded", event => {
+      const audio = document.querySelector("audio");
+      audio.volume = 0.4;
+      audio.play();
+    });
+
   </script>
+
+<audio controls autoplay loop>
+  <source src="music/dtdmm.mp3" type="audio/ogg">
+  <embed src="music/dtdmm.mp3" autostart="true" loop="true" hidden="true"> 
+</audio>
 </head>
 
-<body style="background-image: url('./img/001.png'); background-size:auto">
+<body style="background-image: url('./img/001.png'); background-size:auto"></body>
+<div class="contain">
+  <div class="headPhoto"></div>
+  <div class="words">❤️下雪了, 狗蛋琪琪❤️</div>
+  <div class="subwords">😘爱你呦😘</div>
+  <div class="days">
+    <span class="days-number">1921</span>
+    <span class="days-label">days</span>
+  </div>
+  <div class="seconds">15 hours 24 minutes 30 seconds</div>
 
+  <div class="footer">
+    <p>©2023 WangPeng 汪鹏</a></p>
+  </div>
 
-  <div class="contain">
-
-    <div class="headPhoto"></div>
-    <div class="words">❤️下雪了, 狗蛋琪琪❤️</div>
-    <div class="subwords">😘爱你呦😘</div>
-    <div class="days">
-      <span class="days-number">1921</span>
-      <span class="days-label">days</span>
-    </div>
-    <div class="seconds">15 hours 24 minutes 30 seconds</div>
-
-    <div class="footer">
-      <p>©2023 WangPeng 汪鹏</a></p>
-    </div>
-
-    <div class="snow">
-      <div class="gran">
-        <div class="leaves">
-          <div class="top"></div>
-          <div class="left"></div>
-          <div class="foot"></div>
-        </div>
+  <div class="snow">
+    <div class="gran">
+      <div class="leaves">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="foot"></div>
       </div>
     </div>
-
   </div>
+</div>
 
-  </div>
-
-  <span id="s0" style="
+<span id="s0" style="
         position: absolute;
         font-family: Times;
         font-size: 28px;
@@ -237,7 +243,7 @@
         z-index: 1000;
         left: 1124.01px;
         top: 127.68px;
-      ">*</span><span id="s1" style="
+      ">⭐️</span><span id="s1" style="
         position: absolute;
         font-family: Times;
         font-size: 25px;
@@ -245,7 +251,7 @@
         z-index: 1000;
         left: 187.272px;
         top: 456px;
-      ">*</span><span id="s2" style="
+      ">⭐️</span><span id="s2" style="
         position: absolute;
         font-family: Verdana;
         font-size: 29px;
@@ -261,7 +267,7 @@
         z-index: 1000;
         left: 1194.08px;
         top: 783.12px;
-      ">*</span><span id="s4" style="
+      ">⭐️</span><span id="s4" style="
         position: absolute;
         font-family: Verdana;
         font-size: 14px;
@@ -381,7 +387,7 @@
         z-index: 1000;
         left: 1576.35px;
         top: 195.36px;
-      ">*</span><span id="s19" style="
+      ">⭐️</span><span id="s19" style="
         position: absolute;
         font-family: Verdana;
         font-size: 20px;
@@ -453,7 +459,7 @@
         z-index: 1000;
         left: 266.706px;
         top: 262.2px;
-      ">*</span><span id="s28" style="
+      ">⭐️</span><span id="s28" style="
         position: absolute;
         font-family: Arial;
         font-size: 13px;
@@ -501,7 +507,7 @@
         z-index: 1000;
         left: 1115.94px;
         top: 184.44px;
-      ">*</span><span id="s34" style="
+      ">🍎</span><span id="s34" style="
         position: absolute;
         font-family: Times;
         font-size: 29px;
@@ -565,7 +571,7 @@
         z-index: 1000;
         left: 994.975px;
         top: 688.4px;
-      ">*</span><span id="s42" style="
+      ">⭐️</span><span id="s42" style="
         position: absolute;
         font-family: Arial;
         font-size: 16px;
@@ -589,7 +595,7 @@
         z-index: 1000;
         left: 1127.56px;
         top: 259.44px;
-      ">*</span><span id="s45" style="
+      ">❄️</span><span id="s45" style="
         position: absolute;
         font-family: Times;
         font-size: 12px;
@@ -605,7 +611,7 @@
         z-index: 1000;
         left: 1083.4px;
         top: 514.8px;
-      ">*</span><span id="s47" style="
+      ">❄️</span><span id="s47" style="
         position: absolute;
         font-family: Arial;
         font-size: 15px;
@@ -613,7 +619,7 @@
         z-index: 1000;
         left: 875.694px;
         top: 926px;
-      ">*</span><span id="s48" style="
+      ">🍎</span><span id="s48" style="
         position: absolute;
         font-family: Verdana;
         font-size: 23px;
@@ -629,7 +635,7 @@
         z-index: 1000;
         left: 251.65px;
         top: 570.72px;
-      ">*</span><span id="s50" style="
+      ">❄️</span><span id="s50" style="
         position: absolute;
         font-family: Arial;
         font-size: 24px;
@@ -669,7 +675,7 @@
         z-index: 1000;
         left: 1571.48px;
         top: 436.56px;
-      ">*</span><span id="s55" style="
+      ">❄️</span><span id="s55" style="
         position: absolute;
         font-family: Times;
         font-size: 22px;
@@ -677,7 +683,7 @@
         z-index: 1000;
         left: 1180.86px;
         top: 60.72px;
-      ">*</span><span id="s56" style="
+      ">❄️</span><span id="s56" style="
         position: absolute;
         font-family: Times;
         font-size: 14px;
@@ -693,7 +699,7 @@
         z-index: 1000;
         left: 300.009px;
         top: 480.96px;
-      ">*</span><span id="s58" style="
+      ">🍎</span><span id="s58" style="
         position: absolute;
         font-family: Times;
         font-size: 22px;
@@ -701,7 +707,7 @@
         z-index: 1000;
         left: 63.1754px;
         top: 942.48px;
-      ">*</span><span id="s59" style="
+      ">❄️</span><span id="s59" style="
         position: absolute;
         font-family: Verdana;
         font-size: 14px;
@@ -717,7 +723,7 @@
         z-index: 1000;
         left: 1147.03px;
         top: 577.44px;
-      ">*</span><span id="s61" style="
+      ">❄️</span><span id="s61" style="
         position: absolute;
         font-family: Times;
         font-size: 12px;
@@ -741,7 +747,7 @@
         z-index: 1000;
         left: 1602.9px;
         top: 250.8px;
-      ">*</span><span id="s64" style="
+      ">❄️</span><span id="s64" style="
         position: absolute;
         font-family: Verdana;
         font-size: 18px;
@@ -765,7 +771,7 @@
         z-index: 1000;
         left: 573.379px;
         top: 621px;
-      ">*</span><span id="s67" style="
+      ">❄️</span><span id="s67" style="
         position: absolute;
         font-family: Arial;
         font-size: 24px;
@@ -773,7 +779,7 @@
         z-index: 1000;
         left: 234.191px;
         top: 437.76px;
-      ">*</span><span id="s68" style="
+      ">🍎</span><span id="s68" style="
         position: absolute;
         font-family: Times;
         font-size: 19px;
@@ -781,7 +787,7 @@
         z-index: 1000;
         left: 490.158px;
         top: 526.68px;
-      ">*</span><span id="s69" style="
+      ">⭐️</span><span id="s69" style="
         position: absolute;
         font-family: Times;
         font-size: 16px;
@@ -789,7 +795,7 @@
         z-index: 1000;
         left: 998.221px;
         top: 817.2px;
-      ">*</span><span id="s70" style="
+      ">❄️</span><span id="s70" style="
         position: absolute;
         font-family: Arial;
         font-size: 14px;
@@ -821,7 +827,7 @@
         z-index: 1000;
         left: 891.815px;
         top: 248.4px;
-      ">*</span><span id="s74" style="
+      ">🍎</span><span id="s74" style="
         position: absolute;
         font-family: Times;
         font-size: 18px;
@@ -845,7 +851,7 @@
         z-index: 1000;
         left: 1539.61px;
         top: 828px;
-      ">*</span><span id="s77" style="
+      ">❄️</span><span id="s77" style="
         position: absolute;
         font-family: Times;
         font-size: 28px;
@@ -861,7 +867,7 @@
         z-index: 1000;
         left: 186.046px;
         top: 462.84px;
-      ">*</span><span id="s79" style="
+      ">🍎</span><span id="s79" style="
         position: absolute;
         font-family: Verdana;
         font-size: 25px;
@@ -869,7 +875,7 @@
         z-index: 1000;
         left: 1364.82px;
         top: 933px;
-      ">*</span><span id="s80" style="
+      ">❄️</span><span id="s80" style="
         position: absolute;
         font-family: Times;
         font-size: 21px;
@@ -893,7 +899,7 @@
         z-index: 1000;
         left: 266.078px;
         top: 62.64px;
-      ">*</span><span id="s83" style="
+      ">❄️</span><span id="s83" style="
         position: absolute;
         font-family: Verdana;
         font-size: 20px;
@@ -909,7 +915,7 @@
         z-index: 1000;
         left: 1259.2px;
         top: 588.96px;
-      ">*</span><span id="s85" style="
+      ">🍎</span><span id="s85" style="
         position: absolute;
         font-family: Arial;
         font-size: 27px;
@@ -917,7 +923,7 @@
         z-index: 1000;
         left: 658.329px;
         top: 891px;
-      ">*</span><span id="s86" style="
+      ">❄️</span><span id="s86" style="
         position: absolute;
         font-family: Verdana;
         font-size: 21px;
@@ -941,7 +947,7 @@
         z-index: 1000;
         left: 546.77px;
         top: 388.8px;
-      ">*</span><span id="s89" style="
+      ">🍎</span><span id="s89" style="
         position: absolute;
         font-family: Arial;
         font-size: 22px;
@@ -957,7 +963,7 @@
         z-index: 1000;
         left: 721.953px;
         top: 211.68px;
-      ">*</span><span id="s91" style="
+      ">⭐️</span><span id="s91" style="
         position: absolute;
         font-family: Arial;
         font-size: 29px;
@@ -965,7 +971,7 @@
         z-index: 1000;
         left: 231.36px;
         top: 393.24px;
-      ">*</span><span id="s92" style="
+      ">❄️</span><span id="s92" style="
         position: absolute;
         font-family: Verdana;
         font-size: 24px;
@@ -973,7 +979,7 @@
         z-index: 1000;
         left: 1174.53px;
         top: 737.28px;
-      ">*</span><span id="s93" style="
+      ">❄️</span><span id="s93" style="
         position: absolute;
         font-family: Times;
         font-size: 15px;
@@ -981,7 +987,7 @@
         z-index: 1000;
         left: 107.765px;
         top: 14.4px;
-      ">*</span><span id="s94" style="
+      ">❄️</span><span id="s94" style="
         position: absolute;
         font-family: Verdana;
         font-size: 28px;
@@ -989,7 +995,7 @@
         z-index: 1000;
         left: 253.933px;
         top: 561.12px;
-      ">*</span><span id="s95" style="
+      ">❄️</span><span id="s95" style="
         position: absolute;
         font-family: Times;
         font-size: 21px;
@@ -997,76 +1003,110 @@
         z-index: 1000;
         left: 1144.41px;
         top: 10.08px;
-      ">*</span>
+      ">⭐️</span>
 
-  <script>
-    // The variables below edits the snowfall , feel free to edit
+<script>
+  // The variables below edits the snowfall , feel free to edit
+  var snowmax = 95;
 
-    var snowmax = 95;
+  var snowcolor = new Array(
+    "#aaaacc",
+    "#ddddff",
+    "#ccccdd",
+    "#f3f3f3",
+    "#f0ffff"
+  );
 
-    var snowcolor = new Array(
-      "#aaaacc",
-      "#ddddff",
-      "#ccccdd",
-      "#f3f3f3",
-      "#f0ffff"
-    );
+  var snowtype = new Array("Times", "Arial", "Times", "Verdana");
 
-    var snowtype = new Array("Times", "Arial", "Times", "Verdana");
+  //this one in special is funny
+  var snowletter = "*";
 
-    //this one in special is funny
-    var snowletter = "*";
+  var sinkspeed = 0.6;
 
-    var sinkspeed = 0.6;
+  var snowmaxsize = 30;
 
-    var snowmaxsize = 30;
+  var snowminsize = 12;
 
-    var snowminsize = 12;
+  var snowingzone = 1;
 
-    var snowingzone = 1;
+  //the real deal starts here
 
-    //the real deal starts here
+  var snow = new Array();
+  var marginbottom;
+  var marginright;
+  var timer;
+  var i_snow = 0;
+  var x_mv = new Array();
+  var crds = new Array();
+  var lftrght = new Array();
+  var browserinfos = navigator.userAgent;
+  var ie5 =
+    document.all && document.getElementById && !browserinfos.match(/Opera/);
+  var ns6 = document.getElementById && !document.all;
+  var opera = browserinfos.match(/Opera/);
+  var browserok = ie5 || ns6 || opera;
 
-    var snow = new Array();
-    var marginbottom;
-    var marginright;
-    var timer;
-    var i_snow = 0;
-    var x_mv = new Array();
-    var crds = new Array();
-    var lftrght = new Array();
-    var browserinfos = navigator.userAgent;
-    var ie5 =
-      document.all && document.getElementById && !browserinfos.match(/Opera/);
-    var ns6 = document.getElementById && !document.all;
-    var opera = browserinfos.match(/Opera/);
-    var browserok = ie5 || ns6 || opera;
+  function randommaker(range) {
+    rand = Math.floor(range * Math.random());
+    return rand;
+  }
 
-    function randommaker(range) {
-      rand = Math.floor(range * Math.random());
-      return rand;
+  function initsnow() {
+    if (ie5 || opera) {
+      marginbottom = document.body.scrollHeight;
+      marginright = document.body.clientWidth - 15;
+    } else if (ns6) {
+      marginbottom = document.body.scrollHeight;
+      marginright = window.innerWidth - 15;
     }
-
-    function initsnow() {
-      if (ie5 || opera) {
-        marginbottom = document.body.scrollHeight;
-        marginright = document.body.clientWidth - 15;
-      } else if (ns6) {
-        marginbottom = document.body.scrollHeight;
-        marginright = window.innerWidth - 15;
+    var snowsizerange = snowmaxsize - snowminsize;
+    for (i = 0; i <= snowmax; i++) {
+      crds[i] = 0;
+      lftrght[i] = Math.random() * 15;
+      x_mv[i] = 0.03 + Math.random() / 10;
+      snow[i] = document.getElementById("s" + i);
+      snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)];
+      snow[i].size = randommaker(snowsizerange) + snowminsize;
+      snow[i].style.fontSize = snow[i].size + "px";
+      snow[i].style.color = snowcolor[randommaker(snowcolor.length)];
+      snow[i].style.zIndex = 1000;
+      snow[i].sink = (sinkspeed * snow[i].size) / 5;
+      if (snowingzone == 1) {
+        snow[i].posx = randommaker(marginright - snow[i].size);
       }
-      var snowsizerange = snowmaxsize - snowminsize;
-      for (i = 0; i <= snowmax; i++) {
-        crds[i] = 0;
-        lftrght[i] = Math.random() * 15;
-        x_mv[i] = 0.03 + Math.random() / 10;
-        snow[i] = document.getElementById("s" + i);
-        snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)];
-        snow[i].size = randommaker(snowsizerange) + snowminsize;
-        snow[i].style.fontSize = snow[i].size + "px";
-        snow[i].style.color = snowcolor[randommaker(snowcolor.length)];
-        snow[i].style.zIndex = 1000;
-        snow[i].sink = (sinkspeed * snow[i].size) / 5;
+      if (snowingzone == 2) {
+        snow[i].posx = randommaker(marginright / 2 - snow[i].size);
+      }
+      if (snowingzone == 3) {
+        snow[i].posx =
+          randommaker(marginright / 2 - snow[i].size) + marginright / 4;
+      }
+      if (snowingzone == 4) {
+        snow[i].posx =
+          randommaker(marginright / 2 - snow[i].size) + marginright / 2;
+      }
+      snow[i].posy = randommaker(
+        2 * marginbottom - marginbottom - 2 * snow[i].size
+      );
+      snow[i].style.left = snow[i].posx + "px";
+      snow[i].style.top = snow[i].posy + "px";
+    }
+    movesnow();
+  }
+
+  function movesnow() {
+    for (i = 0; i <= snowmax; i++) {
+      crds[i] += x_mv[i];
+      snow[i].posy += snow[i].sink;
+      snow[i].style.left =
+        snow[i].posx + lftrght[i] * Math.sin(crds[i]) + "px";
+      snow[i].style.top = snow[i].posy + "px";
+
+      if (
+        snow[i].posy >= marginbottom - 2 * snow[i].size ||
+        parseInt(snow[i].style.left) > marginright - 3 * lftrght[i]
+      ) {
         if (snowingzone == 1) {
           snow[i].posx = randommaker(marginright - snow[i].size);
         }
@@ -1081,62 +1121,27 @@
           snow[i].posx =
             randommaker(marginright / 2 - snow[i].size) + marginright / 2;
         }
-        snow[i].posy = randommaker(
-          2 * marginbottom - marginbottom - 2 * snow[i].size
-        );
-        snow[i].style.left = snow[i].posx + "px";
-        snow[i].style.top = snow[i].posy + "px";
+        snow[i].posy = 0;
       }
-      movesnow();
     }
+    var timer = setTimeout("movesnow()", 50);
+  }
 
-    function movesnow() {
-      for (i = 0; i <= snowmax; i++) {
-        crds[i] += x_mv[i];
-        snow[i].posy += snow[i].sink;
-        snow[i].style.left =
-          snow[i].posx + lftrght[i] * Math.sin(crds[i]) + "px";
-        snow[i].style.top = snow[i].posy + "px";
-
-        if (
-          snow[i].posy >= marginbottom - 2 * snow[i].size ||
-          parseInt(snow[i].style.left) > marginright - 3 * lftrght[i]
-        ) {
-          if (snowingzone == 1) {
-            snow[i].posx = randommaker(marginright - snow[i].size);
-          }
-          if (snowingzone == 2) {
-            snow[i].posx = randommaker(marginright / 2 - snow[i].size);
-          }
-          if (snowingzone == 3) {
-            snow[i].posx =
-              randommaker(marginright / 2 - snow[i].size) + marginright / 4;
-          }
-          if (snowingzone == 4) {
-            snow[i].posx =
-              randommaker(marginright / 2 - snow[i].size) + marginright / 2;
-          }
-          snow[i].posy = 0;
-        }
-      }
-      var timer = setTimeout("movesnow()", 50);
-    }
-
-    for (i = 0; i <= snowmax; i++) {
-      document.write(
-        "<span id='s" +
-        i +
-        "' style='position:absolute;top:-" +
-        snowmaxsize +
-        "'>" +
-        snowletter +
-        "</span>"
-      );
-    }
-    if (browserok) {
-      window.onload = initsnow;
-    }
-  </script>
+  for (i = 0; i <= snowmax; i++) {
+    document.write(
+      "<span id='s" +
+      i +
+      "' style='position:absolute;top:-" +
+      snowmaxsize +
+      "'>" +
+      snowletter +
+      "</span>"
+    );
+  }
+  if (browserok) {
+    window.onload = initsnow;
+  }
+</script>
 
 </body>
 
