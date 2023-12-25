@@ -210,33 +210,35 @@
 
 </head>
 
-<body style="background-image: url('./img/001.png'); background-size:auto"></body>
-<div class="contain">
-  <div class="headPhoto"></div>
-  <div class="words">❤️圣诞快乐, 狗蛋琪琪❤️</div>
-  <div class="subwords">😘爱你呦😘</div>
-  <div class="days">
-    <span class="days-number">1921</span>
-    <span class="days-label">days</span>
-  </div>
-  <div class="seconds">15 hours 24 minutes 30 seconds</div>
+<body style="background-image: url('./img/001.png'); background-size: contain;
+   background-repeat: no-repeat; background-position: center;
+   background-color: lightseagreen;">
+  <div class="contain">
+    <div class="headPhoto"></div>
+    <div class="words">❤️圣诞快乐, 狗蛋琪琪❤️</div>
+    <div class="subwords">😘爱你呦😘</div>
+    <div class="days">
+      <span class="days-number">1921</span>
+      <span class="days-label">days</span>
+    </div>
+    <div class="seconds">15 hours 24 minutes 30 seconds</div>
 
-  <div class="footer">
-    <p>©2023 WangPeng 汪鹏</a></p>
-  </div>
+    <div class="footer">
+      <p>©2023 WangPeng 汪鹏</a></p>
+    </div>
 
-  <div class="snow">
-    <div class="gran">
-      <div class="leaves">
-        <div class="top"></div>
-        <div class="left"></div>
-        <div class="foot"></div>
+    <div class="snow">
+      <div class="gran">
+        <div class="leaves">
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="foot"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<span id="s0" style="
+  <span id="s0" style="
         position: absolute;
         font-family: Times;
         font-size: 28px;
@@ -1006,108 +1008,73 @@
         top: 10.08px;
       ">⭐️</span>
 
-<script>
-  // The variables below edits the snowfall , feel free to edit
-  var snowmax = 95;
+  <script>
+    // The variables below edits the snowfall , feel free to edit
+    var snowmax = 95;
 
-  var snowcolor = new Array(
-    "#aaaacc",
-    "#ddddff",
-    "#ccccdd",
-    "#f3f3f3",
-    "#f0ffff"
-  );
+    var snowcolor = new Array(
+      "#aaaacc",
+      "#ddddff",
+      "#ccccdd",
+      "#f3f3f3",
+      "#f0ffff"
+    );
 
-  var snowtype = new Array("Times", "Arial", "Times", "Verdana");
+    var snowtype = new Array("Times", "Arial", "Times", "Verdana");
 
-  //this one in special is funny
-  var snowletter = "*";
+    //this one in special is funny
+    var snowletter = "*";
 
-  var sinkspeed = 0.6;
+    var sinkspeed = 0.6;
 
-  var snowmaxsize = 30;
+    var snowmaxsize = 30;
 
-  var snowminsize = 12;
+    var snowminsize = 12;
 
-  var snowingzone = 1;
+    var snowingzone = 1;
 
-  //the real deal starts here
+    //the real deal starts here
 
-  var snow = new Array();
-  var marginbottom;
-  var marginright;
-  var timer;
-  var i_snow = 0;
-  var x_mv = new Array();
-  var crds = new Array();
-  var lftrght = new Array();
-  var browserinfos = navigator.userAgent;
-  var ie5 =
-    document.all && document.getElementById && !browserinfos.match(/Opera/);
-  var ns6 = document.getElementById && !document.all;
-  var opera = browserinfos.match(/Opera/);
-  var browserok = ie5 || ns6 || opera;
+    var snow = new Array();
+    var marginbottom;
+    var marginright;
+    var timer;
+    var i_snow = 0;
+    var x_mv = new Array();
+    var crds = new Array();
+    var lftrght = new Array();
+    var browserinfos = navigator.userAgent;
+    var ie5 =
+      document.all && document.getElementById && !browserinfos.match(/Opera/);
+    var ns6 = document.getElementById && !document.all;
+    var opera = browserinfos.match(/Opera/);
+    var browserok = ie5 || ns6 || opera;
 
-  function randommaker(range) {
-    rand = Math.floor(range * Math.random());
-    return rand;
-  }
-
-  function initsnow() {
-    if (ie5 || opera) {
-      marginbottom = document.body.scrollHeight;
-      marginright = document.body.clientWidth - 15;
-    } else if (ns6) {
-      marginbottom = document.body.scrollHeight;
-      marginright = window.innerWidth - 15;
+    function randommaker(range) {
+      rand = Math.floor(range * Math.random());
+      return rand;
     }
-    var snowsizerange = snowmaxsize - snowminsize;
-    for (i = 0; i <= snowmax; i++) {
-      crds[i] = 0;
-      lftrght[i] = Math.random() * 15;
-      x_mv[i] = 0.03 + Math.random() / 10;
-      snow[i] = document.getElementById("s" + i);
-      snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)];
-      snow[i].size = randommaker(snowsizerange) + snowminsize;
-      snow[i].style.fontSize = snow[i].size + "px";
-      snow[i].style.color = snowcolor[randommaker(snowcolor.length)];
-      snow[i].style.zIndex = 1000;
-      snow[i].sink = (sinkspeed * snow[i].size) / 5;
-      if (snowingzone == 1) {
-        snow[i].posx = randommaker(marginright - snow[i].size);
-      }
-      if (snowingzone == 2) {
-        snow[i].posx = randommaker(marginright / 2 - snow[i].size);
-      }
-      if (snowingzone == 3) {
-        snow[i].posx =
-          randommaker(marginright / 2 - snow[i].size) + marginright / 4;
-      }
-      if (snowingzone == 4) {
-        snow[i].posx =
-          randommaker(marginright / 2 - snow[i].size) + marginright / 2;
-      }
-      snow[i].posy = randommaker(
-        2 * marginbottom - marginbottom - 2 * snow[i].size
-      );
-      snow[i].style.left = snow[i].posx + "px";
-      snow[i].style.top = snow[i].posy + "px";
-    }
-    movesnow();
-  }
 
-  function movesnow() {
-    for (i = 0; i <= snowmax; i++) {
-      crds[i] += x_mv[i];
-      snow[i].posy += snow[i].sink;
-      snow[i].style.left =
-        snow[i].posx + lftrght[i] * Math.sin(crds[i]) + "px";
-      snow[i].style.top = snow[i].posy + "px";
-
-      if (
-        snow[i].posy >= marginbottom - 2 * snow[i].size ||
-        parseInt(snow[i].style.left) > marginright - 3 * lftrght[i]
-      ) {
+    function initsnow() {
+      if (ie5 || opera) {
+        marginbottom = document.body.scrollHeight;
+        marginright = document.body.clientWidth - 15;
+      } else if (ns6) {
+        marginbottom = document.body.scrollHeight;
+        marginright = window.innerWidth - 15;
+      }
+      var snowsizerange = snowmaxsize - snowminsize;
+      for (i = 0; i <= snowmax; i++) {
+        crds[i] = 0;
+        lftrght[i] = Math.random() * 15;
+        x_mv[i] = 0.03 + Math.random() / 10;
+        snow[i] = document.getElementById("s" + i);
+        snow[i].style.fontFamily = snowtype[randommaker(snowtype.length)];
+        snow[i].size = randommaker(snowsizerange) + snowminsize;
+        snow[i].style.fontSize = snow[i].size + "px";
+        snow[i].style.color = snowcolor[randommaker(snowcolor.length)];
+        snow[i].style.zIndex = 1000;
+        snow[i].sink = (sinkspeed * snow[i].size) / 5;
         if (snowingzone == 1) {
           snow[i].posx = randommaker(marginright - snow[i].size);
         }
@@ -1122,27 +1089,62 @@
           snow[i].posx =
             randommaker(marginright / 2 - snow[i].size) + marginright / 2;
         }
-        snow[i].posy = 0;
+        snow[i].posy = randommaker(
+          2 * marginbottom - marginbottom - 2 * snow[i].size
+        );
+        snow[i].style.left = snow[i].posx + "px";
+        snow[i].style.top = snow[i].posy + "px";
       }
+      movesnow();
     }
-    var timer = setTimeout("movesnow()", 50);
-  }
 
-  for (i = 0; i <= snowmax; i++) {
-    document.write(
-      "<span id='s" +
-      i +
-      "' style='position:absolute;top:-" +
-      snowmaxsize +
-      "'>" +
-      snowletter +
-      "</span>"
-    );
-  }
-  if (browserok) {
-    window.onload = initsnow;
-  }
-</script>
+    function movesnow() {
+      for (i = 0; i <= snowmax; i++) {
+        crds[i] += x_mv[i];
+        snow[i].posy += snow[i].sink;
+        snow[i].style.left =
+          snow[i].posx + lftrght[i] * Math.sin(crds[i]) + "px";
+        snow[i].style.top = snow[i].posy + "px";
+
+        if (
+          snow[i].posy >= marginbottom - 2 * snow[i].size ||
+          parseInt(snow[i].style.left) > marginright - 3 * lftrght[i]
+        ) {
+          if (snowingzone == 1) {
+            snow[i].posx = randommaker(marginright - snow[i].size);
+          }
+          if (snowingzone == 2) {
+            snow[i].posx = randommaker(marginright / 2 - snow[i].size);
+          }
+          if (snowingzone == 3) {
+            snow[i].posx =
+              randommaker(marginright / 2 - snow[i].size) + marginright / 4;
+          }
+          if (snowingzone == 4) {
+            snow[i].posx =
+              randommaker(marginright / 2 - snow[i].size) + marginright / 2;
+          }
+          snow[i].posy = 0;
+        }
+      }
+      var timer = setTimeout("movesnow()", 50);
+    }
+
+    for (i = 0; i <= snowmax; i++) {
+      document.write(
+        "<span id='s" +
+        i +
+        "' style='position:absolute;top:-" +
+        snowmaxsize +
+        "'>" +
+        snowletter +
+        "</span>"
+      );
+    }
+    if (browserok) {
+      window.onload = initsnow;
+    }
+  </script>
 
 </body>
 
